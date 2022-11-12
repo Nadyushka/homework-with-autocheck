@@ -13,6 +13,7 @@ html {
     font-family: 'Montserrat';
     font-weight: 400;
     max-width: 575px;
+    min-height: 100%;
 }
 
 .imageAndText {
@@ -59,6 +60,7 @@ html {
     font-weight: 600;
     margin-top: 7px;
     margin-bottom: 3px;
+    text-align: right;
 }
 
 .messageText {
@@ -69,7 +71,6 @@ html {
     font-size: 1rem;
     font-weight: 400;
     margin-left: 13px;
-    margin-bottom: 13px;
     margin-right: 100px;
 
 }
