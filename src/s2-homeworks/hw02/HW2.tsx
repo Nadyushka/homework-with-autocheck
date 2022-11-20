@@ -45,7 +45,7 @@ export const deleteAffair = (affairs: any, _id: any): any => { // need to fix an
     return affairs // need to fix
 }
 
-function HW2() {
+export function HW2() {
     const [affairs, setAffairs] = useState<any>(defaultAffairs) // need to fix any
     const [filter, setFilter] = useState<FilterType>('all')
 
