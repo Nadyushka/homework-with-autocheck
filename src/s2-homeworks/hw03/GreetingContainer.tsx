@@ -12,9 +12,10 @@ export const pureAddUser = (name: string, setError: (error: string) => void, set
     if (name.length === 0 || /^\s+$/.test(name)) {
         setError('Ошибка! Введите имя!')
     } else {
+        setError('')
         addUserCallback(name)
         setName('')
-        setError('')
+
     }
 }
 
@@ -39,12 +40,16 @@ export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => v
 // более современный и удобный для про :)
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback,}) => { // деструктуризация пропсов
     const [name, setName] = useState<string>('') // need to fix any
-    const [error, setError] = useState<string>('Ошибка! Введите имя!') // need to fix any
+    const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
         setName(e.currentTarget.value) // need to fix
+        if (name.length === 0 || /^\s+$/.test(name)) {
+            setError('Ошибка! Введите имя!')
+        } else {
+            setError('')
+        }
 
-        error && setError('')
     }
     const addUser = () => {
         pureAddUser(name, setError, setName, addUserCallback)
