@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import s from './Stand.module.css'
 import SuperInputText from './common/c1-SuperInputText/SuperInputText'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
@@ -19,6 +19,11 @@ const Stand = () => {
                         id={'hw4-super-input-like-old'}
                         value={stateForAllInputs}
                         onChange={(e) => setValue(e.currentTarget.value)}
+                        onEnter={() => {
+                            setError(stateForAllInputs.trim() ? '' : 'Error')
+                            setValue('')
+                        }
+                        }
                     />
                 </div>
                 {/*инпут с ошибкой:*/}
@@ -29,12 +34,12 @@ const Stand = () => {
                         onChangeText={setValue}
                         error={error}
                         onEnter={() => {
-                            setError(
-                                stateForAllInputs.trim()
-                                    ? ''
-                                    : 'Error'
-                            )
+                            setError(stateForAllInputs.trim() ? '' : 'Error')
                             setValue('')
+                        }}
+                        onChange={(e) => {
+                            setValue(e.currentTarget.value.trim() ? e.currentTarget.value : '')
+                            setError(e.currentTarget.value.trim() ? '' : 'Error')
                         }}
                     />
                 </div>
