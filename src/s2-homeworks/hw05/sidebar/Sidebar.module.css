@@ -7,10 +7,11 @@
     top: 0;
     height: 100%;
     width: 317px;
+    z-index: 100;
 }
 
 .sidebar.open {
-    z-index: 100;
+
     left: 0px;
 }
 
@@ -29,7 +30,6 @@
 }
 
 .nav a {
-    color: #000000;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -43,6 +43,8 @@
 .nav a:hover {
     color: #58ACFF;
 }
+
+
 
 .nav a.active {
     text-decoration-line: underline;
