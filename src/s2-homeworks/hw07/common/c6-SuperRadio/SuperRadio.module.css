@@ -3,10 +3,13 @@
 }
 
 .radio::before {
+    content: " ";
+    background-color: transparent;
 }
 
 
 .radio:checked::before {
+
 }
 
 .label {
@@ -16,4 +19,6 @@
 }
 
 .options {
+
 }
+

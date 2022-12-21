@@ -1,6 +1,7 @@
 .container {
     margin-left: 200px;
     margin-top: 50px;
+    display: flex;
 }
 
 .container div {
@@ -13,4 +14,8 @@
 }
 
 
+.container div div {
+    display: flex;
+    flex-direction: column;
+}
 
