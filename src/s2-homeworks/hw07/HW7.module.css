@@ -1,2 +1,21 @@
 .container {
+    margin-left: 200px;
+    margin-top: 50px;
+    display: flex;
 }
+
+.container div {
+    display: inline;
+}
+
+.container div:nth-child(2){
+    margin-left: 50px;
+
+}
+
+
+.container div div {
+    display: flex;
+    flex-direction: column;
+}
+
