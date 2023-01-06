@@ -14,7 +14,7 @@ function Clock() {
     const start = () => {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-
+         alert('tick')
     }
 
     const stop = () => {
@@ -30,6 +30,7 @@ function Clock() {
     }
 
     const stringTime = new Intl.DateTimeFormat("ru", {
+        hour12:false,
         hour: "numeric",
         minute: "numeric",
         second: "numeric"
@@ -80,14 +81,14 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={show === true} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={true} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={show === false} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
