@@ -6,11 +6,13 @@
 }
 
 .hw {
-width: 80rem;
-
+    width: 80rem;
+    margin-left: 200px;
 }
 
 .hwTitle {
+    margin-left: 200px;
+    margin-bottom: 20px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
